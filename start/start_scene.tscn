@@ -1,0 +1,36 @@
+[gd_scene load_steps=2 format=3 uid="uid://cvm2slmlhllyg"]
+
+[ext_resource type="Script" uid="uid://dvh2mat230dmv" path="res://start/start_scene.gd" id="1_u4q80"]
+
+[node name="Start_Scene" type="Node2D"]
+position = Vector2(583, 334)
+script = ExtResource("1_u4q80")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -90.0
+offset_top = -99.0
+offset_right = 92.0
+offset_bottom = -70.0
+text = "Welcome to Pixel Mirai"
+metadata/_edit_use_anchors_ = true
+
+[node name="Play_Btn" type="Button" parent="."]
+offset_left = -112.0
+offset_top = -17.0
+offset_right = -31.0
+offset_bottom = 22.0
+text = "Let's Play"
+metadata/_edit_use_anchors_ = true
+
+[node name="Quit_Btn" type="Button" parent="."]
+offset_left = 31.0
+offset_top = -18.0
+offset_right = 112.0
+offset_bottom = 21.0
+text = "Quit"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Play_Btn" to="." method="_on_play_btn_pressed"]
+[connection signal="pressed" from="Quit_Btn" to="." method="_on_quit_btn_pressed"]

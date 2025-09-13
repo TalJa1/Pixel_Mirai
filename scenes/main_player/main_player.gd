@@ -14,7 +14,7 @@ func _ready():
 	if has_node("AnimatedSprite2D"):
 		anim = $AnimatedSprite2D
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	var input_vec = Vector2(
 		Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"),
 		Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
@@ -24,10 +24,17 @@ func _physics_process(delta):
 		input_vec = input_vec.normalized()
 		last_dir = input_vec
 
-	velocity = input_vec * speed
 
-	# Simple movement (no collisions). For collision-aware movement, use move_and_slide() and keep velocity on the body.
-	position += velocity * delta
+	# Use the CharacterBody2D `velocity` property and move via physics so position isn't overridden
+	velocity = input_vec * speed
+	# move_and_slide will move the body and handle collisions using the body's velocity
+	var prev_pos = position
+	move_and_slide()
+	# Debug: if position didn't change but we expected movement, fallback and print diagnostics
+	if prev_pos == position and velocity.length() > 0:
+		print("[player debug] input_vec=", input_vec, " velocity=", velocity, " prev_pos=", prev_pos)
+		# Fallback: directly adjust position so player visibly moves while we diagnose
+		position += velocity * _delta
 
 	_update_animation(input_vec)
 

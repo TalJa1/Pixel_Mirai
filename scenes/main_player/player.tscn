@@ -402,7 +402,7 @@ height = 30.4762
 [node name="Player" type="Node2D"]
 
 [node name="Player_body2d" type="CharacterBody2D" parent="."]
-position = Vector2(1, 1)
+position = Vector2(0, 3)
 scale = Vector2(2, 2)
 script = ExtResource("1_grgi7")
 

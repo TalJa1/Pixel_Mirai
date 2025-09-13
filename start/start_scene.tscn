@@ -6,9 +6,9 @@
 position = Vector2(583, 334)
 script = ExtResource("1_u4q80")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Start_Cam" type="Camera2D" parent="."]
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
+[node name="Welcome_Txt" type="RichTextLabel" parent="."]
 offset_left = -90.0
 offset_top = -99.0
 offset_right = 92.0

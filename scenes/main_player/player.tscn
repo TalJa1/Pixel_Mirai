@@ -408,7 +408,7 @@ scale = Vector2(2, 2)
 script = ExtResource("1_grgi7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Player_body2d"]
-position = Vector2(98, 85)
+position = Vector2(97.5, 85)
 scale = Vector2(0.96875, 0.984375)
 sprite_frames = SubResource("SpriteFrames_0fmkx")
 animation = &"b_run_up"

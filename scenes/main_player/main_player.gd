@@ -25,16 +25,14 @@ func _physics_process(_delta):
 		last_dir = input_vec
 
 
-	# Use the CharacterBody2D `velocity` property and move via physics so position isn't overridden
+	# Use the CharacterBody2D `velocity` property and move via physics so collisions stop movement
 	velocity = input_vec * speed
-	# move_and_slide will move the body and handle collisions using the body's velocity
-	var prev_pos = position
-	move_and_slide()
-	# Debug: if position didn't change but we expected movement, fallback and print diagnostics
-	if prev_pos == position and velocity.length() > 0:
-		print("[player debug] input_vec=", input_vec, " velocity=", velocity, " prev_pos=", prev_pos)
-		# Fallback: directly adjust position so player visibly moves while we diagnose
-		position += velocity * _delta
+
+	# Move using move_and_collide; it returns collision info if we hit something
+	var collision = move_and_collide(velocity * _delta)
+	if collision:
+		# Stop movement on collision so player cannot pass through
+		velocity = Vector2.ZERO
 
 	_update_animation(input_vec)
 

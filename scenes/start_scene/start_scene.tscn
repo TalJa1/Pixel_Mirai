@@ -3,7 +3,6 @@
 [ext_resource type="Script" uid="uid://dvh2mat230dmv" path="res://scenes/start_scene/start_scene.gd" id="1_u4q80"]
 
 [node name="Start_Scene" type="Node2D"]
-position = Vector2(583, 334)
 script = ExtResource("1_u4q80")
 
 [node name="Start_Cam" type="Camera2D" parent="."]

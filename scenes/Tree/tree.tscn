@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://cxrdyyol431ne"]
+
+[ext_resource type="Texture2D" uid="uid://br27jvfcfdcg5" path="res://assets/Environment/Props/Static/Trees/Model_03/Size_04.png" id="1_fuogq"]
+
+[node name="Tree" type="Node2D"]
+y_sort_enabled = true
+
+[node name="Tree_Sprite" type="Sprite2D" parent="."]
+z_index = 2
+y_sort_enabled = true
+position = Vector2(2, 96)
+texture = ExtResource("1_fuogq")
+offset = Vector2(0, -99)
+region_enabled = true
+region_rect = Rect2(0, 0, 96.1332, 209.356)

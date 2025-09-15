@@ -1,0 +1,63 @@
+[gd_scene load_steps=5 format=3 uid="uid://bh5swhqlka2f4"]
+
+[ext_resource type="Texture2D" uid="uid://djn4e2slfitcn" path="res://assets/Environment/Structures/Buildings/Roofs.png" id="1_e25xd"]
+[ext_resource type="Texture2D" uid="uid://dsxadh8dkqeci" path="res://assets/Environment/Structures/Buildings/Props.png" id="2_elhij"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jx3rm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_e25xd"]
+size = Vector2(587, 20)
+
+[node name="House_node2d" type="StaticBody2D"]
+z_index = 2
+y_sort_enabled = true
+physics_material_override = SubResource("PhysicsMaterial_jx3rm")
+
+[node name="Roof_Node2D" type="Node2D" parent="."]
+z_index = 2
+
+[node name="Roof_Polygon2D" type="Polygon2D" parent="Roof_Node2D"]
+position = Vector2(-20.5441, -556.338)
+scale = Vector2(3.38108, 3.6116)
+texture = ExtResource("1_e25xd")
+polygon = PackedVector2Array(32.5917, 160.707, 96.2842, 160.261, 96.1831, 164.589, 94.6701, 167.111, 95.0952, 207.026, 32.7502, 207.481)
+
+[node name="Roof_Polygon2D2" type="Polygon2D" parent="Roof_Node2D"]
+position = Vector2(188, -552.944)
+scale = Vector2(3.38108, 3.59042)
+texture = ExtResource("1_e25xd")
+polygon = PackedVector2Array(32.5917, 160.707, 96.2842, 160.261, 96.1831, 164.589, 94.6701, 167.111, 95.0952, 207.026, 63.8205, 207.254, 32.7502, 207.481)
+
+[node name="Roof_Polygon2D3" type="Polygon2D" parent="Roof_Node2D"]
+position = Vector2(398.805, -546.156)
+scale = Vector2(3.38108, 3.54807)
+texture = ExtResource("1_e25xd")
+polygon = PackedVector2Array(32.5917, 160.707, 96.2842, 160.261, 96.1831, 164.589, 94.6701, 167.111, 95.0952, 207.026, 69.2076, 207.215, 64.1891, 207.252, 32.7502, 207.481)
+
+[node name="Left_Node_Polygon2D" type="Polygon2D" parent="Roof_Node2D"]
+position = Vector2(-11, -351.048)
+scale = Vector2(2.11463, 1.79792)
+texture = ExtResource("1_e25xd")
+polygon = PackedVector2Array(42.9377, 208.044, 48.1155, 208.044, 48.1155, 215.354, 42.8362, 215.354)
+uv = PackedVector2Array(42.9377, 208.044, 48.1155, 208.044, 48.1155, 215.354, 42.8362, 215.354)
+
+[node name="Right_Node_Polygon2D2" type="Polygon2D" parent="Roof_Node2D"]
+position = Vector2(552.805, -339.924)
+scale = Vector2(2.11463, 1.74187)
+texture = ExtResource("1_e25xd")
+polygon = PackedVector2Array(79.7819, 207.865, 85.3028, 207.779, 85.3028, 215.37, 79.6956, 215.456)
+uv = PackedVector2Array(79.7819, 207.865, 85.3028, 207.779, 85.3028, 215.37, 79.6956, 215.456)
+
+[node name="Chimney_Polygon2D" type="Polygon2D" parent="Roof_Node2D"]
+position = Vector2(167, -268)
+scale = Vector2(3.25223, 2.66368)
+texture = ExtResource("2_elhij")
+polygon = PackedVector2Array(6.79289, 72.9228, 25.0995, 72.7702, 24.9913, 112.758, 26.4177, 112.842, 26.3338, 116.198, 28.0958, 116.198, 28.1795, 128.532, 3.84693, 128.448, 3.83892, 116.304, 5.74586, 115.846, 5.74586, 112.871, 6.66119, 112.642)
+uv = PackedVector2Array(6.79289, 72.9228, 25.0995, 72.7702, 24.9913, 112.758, 26.4177, 112.842, 26.3338, 116.198, 28.0958, 116.198, 28.1795, 128.532, 3.84693, 128.448, 3.83892, 116.304, 5.74586, 115.846, 5.74586, 112.871, 6.66119, 112.642)
+
+[node name="Walls_Node2D" type="Node2D" parent="."]
+z_index = 1
+
+[node name="House_collision2d" type="CollisionShape2D" parent="."]
+position = Vector2(958, 743)
+shape = SubResource("RectangleShape2D_e25xd")

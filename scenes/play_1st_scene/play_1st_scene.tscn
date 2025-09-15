@@ -285,24 +285,25 @@ position = Vector2(385, 148)
 
 [node name="Group_tree1" type="Node2D" parent="YSortObject_tilemap"]
 y_sort_enabled = true
+position = Vector2(798, 189)
 
 [node name="Tree" parent="YSortObject_tilemap/Group_tree1" instance=ExtResource("3_wou4f")]
-position = Vector2(640, -6)
+position = Vector2(-90, -161)
 
 [node name="Tree2" parent="YSortObject_tilemap/Group_tree1" instance=ExtResource("3_wou4f")]
-position = Vector2(786, 326)
+position = Vector2(56, 171)
 
 [node name="Tree3" parent="YSortObject_tilemap/Group_tree1" instance=ExtResource("3_wou4f")]
-position = Vector2(673, 225)
+position = Vector2(-57, 70)
 
 [node name="Tree4" parent="YSortObject_tilemap/Group_tree1" instance=ExtResource("3_wou4f")]
-position = Vector2(836, 134)
+position = Vector2(106, -21)
 
 [node name="Tree5" parent="YSortObject_tilemap/Group_tree1" instance=ExtResource("3_wou4f")]
-position = Vector2(581, 127)
+position = Vector2(-149, -28)
 
 [node name="Tree6" parent="YSortObject_tilemap/Group_tree1" instance=ExtResource("3_wou4f")]
-position = Vector2(755, 207)
+position = Vector2(25, 52)
 
 [node name="Tree7" parent="YSortObject_tilemap/Group_tree1" instance=ExtResource("3_wou4f")]
-position = Vector2(746, 92)
+position = Vector2(16, -63)

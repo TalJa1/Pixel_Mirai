@@ -395,9 +395,8 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_m8ijm"]
-radius = 8.25807
-height = 30.4762
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_grgi7"]
+size = Vector2(8.45161, 0.761907)
 
 [node name="Player" type="Node2D"]
 y_sort_enabled = true
@@ -420,6 +419,7 @@ offset = Vector2(0, -16)
 position = Vector2(0, -1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player_body2d"]
-position = Vector2(0.499996, -2)
+z_index = 3
+position = Vector2(0.5, 11.5)
 scale = Vector2(0.96875, 0.984375)
-shape = SubResource("CapsuleShape2D_m8ijm")
+shape = SubResource("RectangleShape2D_grgi7")

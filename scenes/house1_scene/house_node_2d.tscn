@@ -402,7 +402,7 @@ region_enabled = true
 region_rect = Rect2(112.136, 739.003, 15.8092, 29.0666)
 
 [node name="Ground_Sprite2D5" type="Sprite2D" parent="Full_Sprite2D/Ground_Wall_Node2D"]
-position = Vector2(183, 435)
+position = Vector2(176, 435)
 scale = Vector2(2.66667, 2.08621)
 texture = ExtResource("3_tmfnj")
 region_enabled = true
@@ -469,7 +469,6 @@ region_rect = Rect2(92.8617, 716.767, 3.25919, 3.32849)
 y_sort_enabled = true
 
 [node name="Door_Sprite2D" type="Sprite2D" parent="Full_Sprite2D/Door_Node2D"]
-z_index = 1
 position = Vector2(226, 406)
 scale = Vector2(2.22414, 2.9)
 texture = ExtResource("2_elhij")
@@ -518,15 +517,16 @@ region_rect = Rect2(360.429, 165.565, 7.26935, 8.17554)
 y_sort_enabled = true
 
 [node name="Pillar_Sprite2D3" type="Sprite2D" parent="Full_Sprite2D/Outside_Node2D"]
-z_index = -1
+z_index = 3
 y_sort_enabled = true
 position = Vector2(613, 397.75)
 scale = Vector2(1.53572, 2.61)
 texture = ExtResource("3_tmfnj")
 region_enabled = true
-region_rect = Rect2(360.179, 125.061, 7.75287, 50.9475)
+region_rect = Rect2(360, 128, 7.93185, 48.0085)
 
 [node name="Pillar_S_Polygon2D" type="Polygon2D" parent="Full_Sprite2D/Outside_Node2D"]
+z_index = 3
 y_sort_enabled = true
 position = Vector2(306, -12)
 scale = Vector2(1.53572, 2.61)
@@ -535,6 +535,7 @@ polygon = PackedVector2Array(72.6527, 128.131, 80.382, 128.131, 63.9705, 145.178
 uv = PackedVector2Array(72.6527, 128.131, 80.382, 128.131, 63.9705, 145.178, 64.0764, 137.025)
 
 [node name="Pillar_S_Polygon2D2" type="Polygon2D" parent="Full_Sprite2D/Outside_Node2D"]
+z_index = 3
 y_sort_enabled = true
 position = Vector2(509, -11)
 scale = Vector2(1.53572, 2.61)

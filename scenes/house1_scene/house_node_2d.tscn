@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://bh5swhqlka2f4"]
+[gd_scene load_steps=7 format=3 uid="uid://bh5swhqlka2f4"]
 
 [ext_resource type="Texture2D" uid="uid://djn4e2slfitcn" path="res://assets/Environment/Structures/Buildings/Roofs.png" id="1_e25xd"]
 [ext_resource type="Texture2D" uid="uid://dsxadh8dkqeci" path="res://assets/Environment/Structures/Buildings/Props.png" id="2_elhij"]
+[ext_resource type="Texture2D" uid="uid://hxlenmceo4yc" path="res://assets/Environment/Structures/Buildings/Walls.png" id="3_tmfnj"]
+[ext_resource type="Texture2D" uid="uid://tjemt75dr4u6" path="res://assets/Environment/Structures/Buildings/Shadows.png" id="4_8idu4"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jx3rm"]
 
@@ -16,21 +18,23 @@ physics_material_override = SubResource("PhysicsMaterial_jx3rm")
 [node name="Roof_Node2D" type="Node2D" parent="."]
 z_index = 2
 
-[node name="Roof_Polygon2D" type="Polygon2D" parent="Roof_Node2D"]
+[node name="Roof_Node2D" type="Node2D" parent="Roof_Node2D"]
+
+[node name="Roof_Polygon2D" type="Polygon2D" parent="Roof_Node2D/Roof_Node2D"]
 z_index = 3
 position = Vector2(-72.127, -574.175)
 scale = Vector2(3.38108, 3.6116)
 texture = ExtResource("1_e25xd")
 polygon = PackedVector2Array(32.5917, 160.707, 96.2842, 160.261, 96.1831, 164.589, 94.6701, 167.111, 95.4154, 208.198, 32.5208, 208.198)
 
-[node name="Roof_Polygon2D2" type="Polygon2D" parent="Roof_Node2D"]
+[node name="Roof_Polygon2D2" type="Polygon2D" parent="Roof_Node2D/Roof_Node2D"]
 z_index = 3
 position = Vector2(138, -574)
 scale = Vector2(3.38108, 3.6116)
 texture = ExtResource("1_e25xd")
 polygon = PackedVector2Array(32.5917, 160.707, 96.2842, 160.261, 96.1831, 164.589, 94.6701, 167.111, 95.4154, 208.198, 32.5208, 208.198)
 
-[node name="Roof_Polygon2D3" type="Polygon2D" parent="Roof_Node2D"]
+[node name="Roof_Polygon2D3" type="Polygon2D" parent="Roof_Node2D/Roof_Node2D"]
 z_index = 3
 position = Vector2(346, -574)
 scale = Vector2(3.38108, 3.6116)
@@ -38,8 +42,8 @@ texture = ExtResource("1_e25xd")
 polygon = PackedVector2Array(32.5917, 160.707, 96.2842, 160.261, 96.1831, 164.589, 94.6701, 167.111, 95.4154, 208.198, 32.5208, 208.198)
 
 [node name="Left_Node_Polygon2D" type="Polygon2D" parent="Roof_Node2D"]
-position = Vector2(-62.5828, -368.884)
-scale = Vector2(2.11463, 1.79792)
+position = Vector2(-62.5828, -344.21)
+scale = Vector2(2.11463, 1.68335)
 texture = ExtResource("1_e25xd")
 polygon = PackedVector2Array(42.9377, 208.044, 48.1155, 208.044, 48.1155, 215.354, 42.8362, 215.354)
 uv = PackedVector2Array(42.9377, 208.044, 48.1155, 208.044, 48.1155, 215.354, 42.8362, 215.354)
@@ -53,64 +57,271 @@ uv = PackedVector2Array(79.7819, 207.865, 85.3028, 207.779, 85.3028, 215.37, 79.
 
 [node name="Chimney_Polygon2D" type="Polygon2D" parent="Roof_Node2D"]
 z_index = 3
-position = Vector2(115.417, -285.837)
-scale = Vector2(3.25223, 2.66368)
+position = Vector2(115.417, -232.82)
+scale = Vector2(3.25223, 2.2512)
 texture = ExtResource("2_elhij")
 polygon = PackedVector2Array(6.79289, 72.9228, 25.0995, 72.7702, 24.9913, 112.758, 26.4177, 112.842, 26.3338, 116.198, 28.0958, 116.198, 28.1795, 128.532, 3.84693, 128.448, 3.83892, 116.304, 5.74586, 115.846, 5.74586, 112.871, 6.66119, 112.642)
 uv = PackedVector2Array(6.79289, 72.9228, 25.0995, 72.7702, 24.9913, 112.758, 26.4177, 112.842, 26.3338, 116.198, 28.0958, 116.198, 28.1795, 128.532, 3.84693, 128.448, 3.83892, 116.304, 5.74586, 115.846, 5.74586, 112.871, 6.66119, 112.642)
 
-[node name="Serrated_obj_Sprite2D" type="Sprite2D" parent="Roof_Node2D"]
+[node name="Serrated_Obj_Node2D" type="Node2D" parent="Roof_Node2D"]
+
+[node name="Serrated_obj_Sprite2D" type="Sprite2D" parent="Roof_Node2D/Serrated_Obj_Node2D"]
 position = Vector2(93, 182)
 scale = Vector2(2.125, 2.25)
 texture = ExtResource("1_e25xd")
 region_enabled = true
 region_rect = Rect2(0, 256, 48, 8)
 
-[node name="Serrated_obj_Sprite2D2" type="Sprite2D" parent="Roof_Node2D"]
+[node name="Serrated_obj_Sprite2D2" type="Sprite2D" parent="Roof_Node2D/Serrated_Obj_Node2D"]
 position = Vector2(360, 182)
 scale = Vector2(2.125, 2.25)
 texture = ExtResource("1_e25xd")
 region_enabled = true
 region_rect = Rect2(0, 256, 48, 8)
 
-[node name="Serrated_obj_Sprite2D5" type="Sprite2D" parent="Roof_Node2D"]
-z_index = 2
+[node name="Serrated_obj_Sprite2D5" type="Sprite2D" parent="Roof_Node2D/Serrated_Obj_Node2D"]
 position = Vector2(539, 182)
 scale = Vector2(2.125, 2.25)
 texture = ExtResource("1_e25xd")
 region_enabled = true
 region_rect = Rect2(0, 256, 48, 8)
 
-[node name="Serrated_obj_Sprite2D7" type="Sprite2D" parent="Roof_Node2D"]
+[node name="Serrated_obj_Sprite2D7" type="Sprite2D" parent="Roof_Node2D/Serrated_Obj_Node2D"]
 position = Vector2(616, 182)
 scale = Vector2(2.125, 2.25)
 texture = ExtResource("1_e25xd")
 region_enabled = true
 region_rect = Rect2(0, 256, 48, 8)
 
-[node name="Serrated_obj_Sprite2D6" type="Sprite2D" parent="Roof_Node2D"]
+[node name="Serrated_obj_Sprite2D6" type="Sprite2D" parent="Roof_Node2D/Serrated_Obj_Node2D"]
 position = Vector2(450, 182)
 scale = Vector2(2.125, 2.25)
 texture = ExtResource("1_e25xd")
 region_enabled = true
 region_rect = Rect2(0, 256, 48, 8)
 
-[node name="Serrated_obj_Sprite2D3" type="Sprite2D" parent="Roof_Node2D"]
+[node name="Serrated_obj_Sprite2D3" type="Sprite2D" parent="Roof_Node2D/Serrated_Obj_Node2D"]
 position = Vector2(271, 182)
 scale = Vector2(2.125, 2.25)
 texture = ExtResource("1_e25xd")
 region_enabled = true
 region_rect = Rect2(0, 256, 48, 8)
 
-[node name="Serrated_obj_Sprite2D4" type="Sprite2D" parent="Roof_Node2D"]
+[node name="Serrated_obj_Sprite2D4" type="Sprite2D" parent="Roof_Node2D/Serrated_Obj_Node2D"]
 position = Vector2(182, 182)
 scale = Vector2(2.125, 2.25)
 texture = ExtResource("1_e25xd")
 region_enabled = true
 region_rect = Rect2(0, 256, 48, 8)
 
-[node name="Walls_Node2D" type="Node2D" parent="."]
+[node name="Shadow_Sprite2D" type="Sprite2D" parent="Roof_Node2D"]
+position = Vector2(356.348, 177)
+scale = Vector2(25.6219, 0.803572)
+texture = ExtResource("4_8idu4")
+region_enabled = true
+region_rect = Rect2(47.9819, 16.0986, 23.9235, 7.90515)
+
+[node name="Up_Wall_Node2D" type="Node2D" parent="."]
 z_index = 1
+
+[node name="TopLeft_Sprite2D" type="Sprite2D" parent="Up_Wall_Node2D"]
+position = Vector2(104.375, 190)
+scale = Vector2(1.54688, 1.14286)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(207.944, 147.904, 16.5697, 28.6875)
+
+[node name="Top_Center_Node2D" type="Node2D" parent="Up_Wall_Node2D"]
+
+[node name="TopCenter_Sprite2D" type="Sprite2D" parent="Up_Wall_Node2D/Top_Center_Node2D"]
+position = Vector2(143.875, 190)
+scale = Vector2(1.65417, 1.12333)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(224.485, 147.81, 32.2962, 28.5125)
+
+[node name="TopCenter_Sprite2D2" type="Sprite2D" parent="Up_Wall_Node2D/Top_Center_Node2D"]
+position = Vector2(302.875, 190)
+scale = Vector2(1.65417, 1.12333)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(224.485, 147.81, 32.2962, 28.5125)
+
+[node name="TopCenter_Sprite2D5" type="Sprite2D" parent="Up_Wall_Node2D/Top_Center_Node2D"]
+position = Vector2(567.875, 190)
+scale = Vector2(1.65417, 1.12333)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(224.485, 147.81, 32.2962, 28.5125)
+
+[node name="TopCenter_Sprite2D6" type="Sprite2D" parent="Up_Wall_Node2D/Top_Center_Node2D"]
+position = Vector2(514.875, 190)
+scale = Vector2(1.65417, 1.12333)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(224.485, 147.81, 32.2962, 28.5125)
+
+[node name="TopCenter_Sprite2D7" type="Sprite2D" parent="Up_Wall_Node2D/Top_Center_Node2D"]
+position = Vector2(461.875, 190)
+scale = Vector2(1.65417, 1.12333)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(224.485, 147.81, 32.2962, 28.5125)
+
+[node name="TopCenter_Sprite2D8" type="Sprite2D" parent="Up_Wall_Node2D/Top_Center_Node2D"]
+position = Vector2(408.875, 190)
+scale = Vector2(1.65417, 1.12333)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(224.485, 147.81, 32.2962, 28.5125)
+
+[node name="TopCenter_Sprite2D9" type="Sprite2D" parent="Up_Wall_Node2D/Top_Center_Node2D"]
+position = Vector2(355.875, 190)
+scale = Vector2(1.65417, 1.12333)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(224.485, 147.81, 32.2962, 28.5125)
+
+[node name="TopCenter_Sprite2D3" type="Sprite2D" parent="Up_Wall_Node2D/Top_Center_Node2D"]
+position = Vector2(249.875, 190)
+scale = Vector2(1.65417, 1.12333)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(224.485, 147.81, 32.2962, 28.5125)
+
+[node name="TopCenter_Sprite2D4" type="Sprite2D" parent="Up_Wall_Node2D/Top_Center_Node2D"]
+position = Vector2(196.875, 190)
+scale = Vector2(1.65417, 1.12333)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(224.485, 147.81, 32.2962, 28.5125)
+
+[node name="TopRight_Sprite2D" type="Sprite2D" parent="Up_Wall_Node2D"]
+position = Vector2(607, 190)
+scale = Vector2(1.6286, 1.12821)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(256, 148, 16.0733, 28.2954)
+
+[node name="Shadow_Sprite2D" type="Sprite2D" parent="Up_Wall_Node2D"]
+position = Vector2(355.391, 192)
+scale = Vector2(22.053, 3.32143)
+texture = ExtResource("4_8idu4")
+region_enabled = true
+region_rect = Rect2(47.9819, 16.0986, 23.9235, 7.90515)
+
+[node name="Center_Wall_Node2D" type="Node2D" parent="."]
+
+[node name="Left_Sprite2D" type="Sprite2D" parent="Center_Wall_Node2D"]
+position = Vector2(117, 261.459)
+scale = Vector2(1.92308, 2.48)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(303.801, 125.278, 26.1155, 50.9253)
+
+[node name="Center_Node2D" type="Node2D" parent="Center_Wall_Node2D"]
+
+[node name="Center_S_Sprite2D3" type="Sprite2D" parent="Center_Wall_Node2D/Center_Node2D"]
+position = Vector2(174, 261)
+scale = Vector2(2.3133, 2.49091)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(290.181, 189.102, 27.6689, 50.8807)
+
+[node name="Center_S_Sprite2D4" type="Sprite2D" parent="Center_Wall_Node2D/Center_Node2D"]
+position = Vector2(293, 261)
+scale = Vector2(1.74924, 2.49091)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(290.181, 189.102, 27.6689, 50.8807)
+
+[node name="Center_S_Sprite2D5" type="Sprite2D" parent="Center_Wall_Node2D/Center_Node2D"]
+position = Vector2(237, 261)
+scale = Vector2(2.3133, 2.49091)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(290.181, 189.102, 27.6689, 50.8807)
+
+[node name="Center_S_Sprite2D6" type="Sprite2D" parent="Center_Wall_Node2D/Center_Node2D"]
+position = Vector2(438.23, 261.273)
+scale = Vector2(2.3133, 2.49091)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(290.181, 189.102, 27.6689, 50.8807)
+
+[node name="Center_S_Sprite2D9" type="Sprite2D" parent="Center_Wall_Node2D/Center_Node2D"]
+position = Vector2(361.885, 261)
+scale = Vector2(2.97147, 2.49091)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(290.181, 189.102, 27.6689, 50.8807)
+
+[node name="Center_S_Sprite2D7" type="Sprite2D" parent="Center_Wall_Node2D/Center_Node2D"]
+position = Vector2(557.23, 261.273)
+scale = Vector2(1.74924, 2.49091)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(290.181, 189.102, 27.6689, 50.8807)
+
+[node name="Center_S_Sprite2D8" type="Sprite2D" parent="Center_Wall_Node2D/Center_Node2D"]
+position = Vector2(501.23, 261.273)
+scale = Vector2(2.3133, 2.49091)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(290.181, 189.102, 27.6689, 50.8807)
+
+[node name="Right_Sprite2D7" type="Sprite2D" parent="Center_Wall_Node2D/Center_Node2D"]
+position = Vector2(319, 261)
+scale = Vector2(1.27977, 2.49664)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(326.184, 125.185, 3.55341, 50.7214)
+
+[node name="Right_Sprite2D8" type="Sprite2D" parent="Center_Wall_Node2D/Center_Node2D"]
+position = Vector2(404, 261.292)
+scale = Vector2(1.27977, 2.50832)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(326.184, 125.185, 3.55341, 50.7214)
+
+[node name="Right_Node2D" type="Node2D" parent="Center_Wall_Node2D"]
+
+[node name="Right_Sprite2D3" type="Sprite2D" parent="Center_Wall_Node2D/Right_Node2D"]
+position = Vector2(613, 261.5)
+scale = Vector2(1.53572, 2.5)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(360.179, 125.061, 7.75287, 50.9475)
+
+[node name="Right_Sprite2D4" type="Sprite2D" parent="Center_Wall_Node2D/Right_Node2D"]
+position = Vector2(596.357, 261)
+scale = Vector2(1.57143, 2.52)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(311.585, 125.076, 14.7212, 50.6666)
+
+[node name="Right_Sprite2D9" type="Sprite2D" parent="Center_Wall_Node2D/Right_Node2D"]
+position = Vector2(583, 260.792)
+scale = Vector2(1.27977, 2.52832)
+texture = ExtResource("3_tmfnj")
+region_enabled = true
+region_rect = Rect2(326.184, 125.185, 3.55341, 50.7214)
+
+[node name="Window_Node2D" type="Node2D" parent="Center_Wall_Node2D"]
+
+[node name="Window1_Sprite2D" type="Sprite2D" parent="Center_Wall_Node2D/Window_Node2D"]
+position = Vector2(227, 243)
+scale = Vector2(2.59524, 2.40625)
+texture = ExtResource("2_elhij")
+region_enabled = true
+region_rect = Rect2(37.0797, 95.9436, 21.6478, 32.22)
+
+[node name="Window1_Sprite2D2" type="Sprite2D" parent="Center_Wall_Node2D/Window_Node2D"]
+position = Vector2(497, 240)
+scale = Vector2(2.59524, 2.40625)
+texture = ExtResource("2_elhij")
+region_enabled = true
+region_rect = Rect2(37.0797, 95.9436, 21.6478, 32.22)
 
 [node name="House_collision2d" type="CollisionShape2D" parent="."]
 position = Vector2(535, -100)

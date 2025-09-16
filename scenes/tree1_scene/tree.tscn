@@ -14,7 +14,7 @@ z_index = 2
 y_sort_enabled = true
 position = Vector2(2, 96)
 texture = ExtResource("1_fuogq")
-offset = Vector2(1, -100)
+offset = Vector2(1, -101)
 region_enabled = true
 region_rect = Rect2(0, 0, 96.1332, 209.356)
 

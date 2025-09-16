@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bh5swhqlka2f4"]
+[gd_scene load_steps=8 format=3 uid="uid://bh5swhqlka2f4"]
 
 [ext_resource type="Texture2D" uid="uid://djn4e2slfitcn" path="res://assets/Environment/Structures/Buildings/Roofs.png" id="1_e25xd"]
 [ext_resource type="Texture2D" uid="uid://dsxadh8dkqeci" path="res://assets/Environment/Structures/Buildings/Props.png" id="2_elhij"]
@@ -9,6 +9,9 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e25xd"]
 size = Vector2(325.875, 169)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8idu4"]
+size = Vector2(12.5, 4)
 
 [node name="House_node2d" type="StaticBody2D"]
 z_index = 2
@@ -517,11 +520,11 @@ region_rect = Rect2(360.429, 165.565, 7.26935, 8.17554)
 y_sort_enabled = true
 
 [node name="Pillar_Sprite2D3" type="Sprite2D" parent="Full_Sprite2D/Outside_Node2D"]
-z_index = 3
 y_sort_enabled = true
-position = Vector2(613, 397.75)
+position = Vector2(613, 462)
 scale = Vector2(1.53572, 2.61)
 texture = ExtResource("3_tmfnj")
+offset = Vector2(0, -24)
 region_enabled = true
 region_rect = Rect2(360, 128, 7.93185, 48.0085)
 
@@ -547,3 +550,8 @@ uv = PackedVector2Array(47.3337, 128.1, 55.0072, 128.015, 63.8743, 137.138, 63.9
 y_sort_enabled = true
 position = Vector2(-31, -72)
 shape = SubResource("RectangleShape2D_e25xd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 4
+position = Vector2(334, 8)
+shape = SubResource("RectangleShape2D_8idu4")

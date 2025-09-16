@@ -17,22 +17,25 @@ physics_material_override = SubResource("PhysicsMaterial_jx3rm")
 z_index = 2
 
 [node name="Roof_Polygon2D" type="Polygon2D" parent="Roof_Node2D"]
+z_index = 3
 position = Vector2(-72.127, -574.175)
 scale = Vector2(3.38108, 3.6116)
 texture = ExtResource("1_e25xd")
-polygon = PackedVector2Array(32.5917, 160.707, 96.2842, 160.261, 96.1831, 164.589, 94.6701, 167.111, 95.0952, 207.026, 32.7502, 207.481)
+polygon = PackedVector2Array(32.5917, 160.707, 96.2842, 160.261, 96.1831, 164.589, 94.6701, 167.111, 95.4154, 208.198, 32.5208, 208.198)
 
 [node name="Roof_Polygon2D2" type="Polygon2D" parent="Roof_Node2D"]
-position = Vector2(136.417, -570.781)
-scale = Vector2(3.38108, 3.59042)
+z_index = 3
+position = Vector2(138, -574)
+scale = Vector2(3.38108, 3.6116)
 texture = ExtResource("1_e25xd")
-polygon = PackedVector2Array(32.5917, 160.707, 96.2842, 160.261, 96.1831, 164.589, 94.6701, 167.111, 95.0952, 207.026, 63.8205, 207.254, 32.7502, 207.481)
+polygon = PackedVector2Array(32.5917, 160.707, 96.2842, 160.261, 96.1831, 164.589, 94.6701, 167.111, 95.4154, 208.198, 32.5208, 208.198)
 
 [node name="Roof_Polygon2D3" type="Polygon2D" parent="Roof_Node2D"]
-position = Vector2(347.222, -563.993)
-scale = Vector2(3.38108, 3.54807)
+z_index = 3
+position = Vector2(346, -574)
+scale = Vector2(3.38108, 3.6116)
 texture = ExtResource("1_e25xd")
-polygon = PackedVector2Array(32.5917, 160.707, 96.2842, 160.261, 96.1831, 164.589, 94.6701, 167.111, 95.0952, 207.026, 69.2076, 207.215, 64.1891, 207.252, 32.7502, 207.481)
+polygon = PackedVector2Array(32.5917, 160.707, 96.2842, 160.261, 96.1831, 164.589, 94.6701, 167.111, 95.4154, 208.198, 32.5208, 208.198)
 
 [node name="Left_Node_Polygon2D" type="Polygon2D" parent="Roof_Node2D"]
 position = Vector2(-62.5828, -368.884)
@@ -42,13 +45,14 @@ polygon = PackedVector2Array(42.9377, 208.044, 48.1155, 208.044, 48.1155, 215.35
 uv = PackedVector2Array(42.9377, 208.044, 48.1155, 208.044, 48.1155, 215.354, 42.8362, 215.354)
 
 [node name="Right_Node_Polygon2D2" type="Polygon2D" parent="Roof_Node2D"]
-position = Vector2(501.222, -357.76)
-scale = Vector2(2.11463, 1.74187)
+position = Vector2(499, -402)
+scale = Vector2(2.11463, 1.95801)
 texture = ExtResource("1_e25xd")
-polygon = PackedVector2Array(79.7819, 207.865, 85.3028, 207.779, 85.3028, 215.37, 79.6956, 215.456)
+polygon = PackedVector2Array(79.7819, 207.865, 85.3028, 207.779, 85.3028, 215.37, 82.4302, 215.414, 79.6956, 215.456)
 uv = PackedVector2Array(79.7819, 207.865, 85.3028, 207.779, 85.3028, 215.37, 79.6956, 215.456)
 
 [node name="Chimney_Polygon2D" type="Polygon2D" parent="Roof_Node2D"]
+z_index = 3
 position = Vector2(115.417, -285.837)
 scale = Vector2(3.25223, 2.66368)
 texture = ExtResource("2_elhij")
@@ -64,6 +68,28 @@ region_rect = Rect2(0, 256, 48, 8)
 
 [node name="Serrated_obj_Sprite2D2" type="Sprite2D" parent="Roof_Node2D"]
 position = Vector2(360, 182)
+scale = Vector2(2.125, 2.25)
+texture = ExtResource("1_e25xd")
+region_enabled = true
+region_rect = Rect2(0, 256, 48, 8)
+
+[node name="Serrated_obj_Sprite2D5" type="Sprite2D" parent="Roof_Node2D"]
+z_index = 2
+position = Vector2(539, 182)
+scale = Vector2(2.125, 2.25)
+texture = ExtResource("1_e25xd")
+region_enabled = true
+region_rect = Rect2(0, 256, 48, 8)
+
+[node name="Serrated_obj_Sprite2D7" type="Sprite2D" parent="Roof_Node2D"]
+position = Vector2(616, 182)
+scale = Vector2(2.125, 2.25)
+texture = ExtResource("1_e25xd")
+region_enabled = true
+region_rect = Rect2(0, 256, 48, 8)
+
+[node name="Serrated_obj_Sprite2D6" type="Sprite2D" parent="Roof_Node2D"]
+position = Vector2(450, 182)
 scale = Vector2(2.125, 2.25)
 texture = ExtResource("1_e25xd")
 region_enabled = true
@@ -87,5 +113,5 @@ region_rect = Rect2(0, 256, 48, 8)
 z_index = 1
 
 [node name="House_collision2d" type="CollisionShape2D" parent="."]
-position = Vector2(958, 743)
+position = Vector2(535, -100)
 shape = SubResource("RectangleShape2D_e25xd")

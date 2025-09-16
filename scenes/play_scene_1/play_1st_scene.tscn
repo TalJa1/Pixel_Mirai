@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=4 uid="uid://coa5nm7f3eb8k"]
+[gd_scene load_steps=7 format=4 uid="uid://coa5nm7f3eb8k"]
 
 [ext_resource type="PackedScene" uid="uid://ch6e7m01x14br" path="res://scenes/main_player/player.tscn" id="1_eks0b"]
 [ext_resource type="Texture2D" uid="uid://ctmjv6q6r3ubl" path="res://assets/Environment/Tilesets/Floors_Tiles.png" id="2_3bvl4"]
 [ext_resource type="PackedScene" uid="uid://cxrdyyol431ne" path="res://scenes/tree1_scene/tree.tscn" id="3_wou4f"]
+[ext_resource type="PackedScene" uid="uid://bh5swhqlka2f4" path="res://scenes/house1_scene/house_node_2d.tscn" id="4_0towx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3bvl4"]
 texture = ExtResource("2_3bvl4")
@@ -281,7 +282,7 @@ y_sort_enabled = true
 
 [node name="Player" parent="YSortObject_tilemap" instance=ExtResource("1_eks0b")]
 z_index = 2
-position = Vector2(385, 148)
+position = Vector2(433, 182)
 
 [node name="Group_tree1" type="Node2D" parent="YSortObject_tilemap"]
 y_sort_enabled = true
@@ -307,3 +308,6 @@ position = Vector2(25, 52)
 
 [node name="Tree7" parent="YSortObject_tilemap/Group_tree1" instance=ExtResource("3_wou4f")]
 position = Vector2(16, -63)
+
+[node name="House_node2d" parent="YSortObject_tilemap" instance=ExtResource("4_0towx")]
+position = Vector2(160, 143)

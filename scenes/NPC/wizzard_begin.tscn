@@ -54,7 +54,7 @@ y_sort_enabled = true
 scale = Vector2(2.121, 2.58104)
 sprite_frames = SubResource("SpriteFrames_ag63q")
 animation = &"idle"
-frame_progress = 0.346928
+frame_progress = 0.286381
 offset = Vector2(0, -16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -70,11 +70,11 @@ shape = SubResource("CircleShape2D_w0hvq")
 [node name="Label" type="Label" parent="."]
 visible = false
 z_index = 10
-offset_left = -64.0
+offset_left = -100.0
 offset_top = -123.0
-offset_right = 66.0
+offset_right = 111.0
 offset_bottom = -100.0
-text = "Hello, Traveller!!!"
+text = "Hmmmmmmmmmmmmm"
 
 [connection signal="body_entered" from="Interate_Area2D" to="." method="_on_interate_area_2d_body_entered"]
 [connection signal="body_exited" from="Interate_Area2D" to="." method="_on_interate_area_2d_body_exited"]

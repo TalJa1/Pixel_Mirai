@@ -4,6 +4,7 @@ extends CharacterBody2D
 
 var anim: AnimatedSprite2D
 var label: Label
+var default_label_text: String = ""
 
 func _ready() -> void:
 	# Cache nodes from the scene. Adjust names if you rename nodes in the editor.
@@ -18,33 +19,36 @@ func _ready() -> void:
 	if anim and not anim.is_playing():
 		anim.play()
 	
-	# Ensure label starts hidden (explicit in code to override any accidental scene state)
-	if label:
-		label.visible = false
-		label.hide()
+  
+	# Prevent Area2D emitting a body_entered during scene setup by enabling monitoring deferred
+	if has_node("Interate_Area2D"):
+		$Interate_Area2D.monitoring = false
+		call_deferred("_enable_interact_area")
 
 
-func _on_Interate_Area2D_body_entered(body: Node) -> void:
-	# Show the label only when the player (CharacterBody2D) enters the area
-	if label == null:
-		return
-	if body is CharacterBody2D or body.get("name") == "Player" or body.get_class() == "CharacterBody2D":
-		label.visible = true
-
-
-func _on_Interate_Area2D_body_exited(body: Node) -> void:
-	# Hide the label when the player leaves
-	if label == null:
-		return
-	if body is CharacterBody2D or body.get("name") == "Player" or body.get_class() == "CharacterBody2D":
-		label.visible = false
+func _enable_interact_area() -> void:
+	# called deferred so enabling monitoring doesn't trigger immediate enter events during setup
+	if has_node("Interate_Area2D"):
+		$Interate_Area2D.monitoring = true
 
 
 func _on_interate_area_2d_body_entered(body: Node) -> void:
-	# Backwards-compatible wrapper for scene connection (lowercase name)
-	_on_Interate_Area2D_body_entered(body)
+	# Show the label only when the player (CharacterBody2D) enters the area
+		if label == null:
+				return
+
+
+		if body is CharacterBody2D or body.get("name") == "Player" or body.get_class() == "CharacterBody2D":
+			label.text = "Hello, how are you today?"
+			label.show()
 
 
 func _on_interate_area_2d_body_exited(body: Node) -> void:
-	# Backwards-compatible wrapper for scene connection (lowercase name)
-	_on_Interate_Area2D_body_exited(body)
+	# Hide the label when the player leaves
+	if label == null:
+		return
+
+	if body is CharacterBody2D or body.get("name") == "Player" or body.get_class() == "CharacterBody2D":
+		# restore default text and hide
+		label.text = default_label_text
+		label.hide()

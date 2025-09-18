@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1v6va1g5r1d2"]
+
+[ext_resource type="Texture2D" uid="uid://dg7f1p50looee" path="res://assets/Environment/Props/Static/Trees/Model_01/Size_05.png" id="1_6uv4u"]
+
+[node name="Tree2_Static2d" type="StaticBody2D"]
+y_sort_enabled = true
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+y_sort_enabled = true
+position = Vector2(2, 1)
+scale = Vector2(4.05046, 4.125)
+texture = ExtResource("1_6uv4u")
+offset = Vector2(0, -74)
+region_enabled = true
+region_rect = Rect2(0, 0, 109.498, 159.378)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(2, 0)
+polygon = PackedVector2Array(-88, -55, -93, -52, -101, -42, -102, -28, -124, -19, -132, -10, -131, 6, -129, 15, -100, 15, -76, 15, -71, 30, -46, 24, -22, 25, -18, 13, -1, 12, 8, 8, 21, 8, 32, 27, 48, 29, 51, 18, 62, 6, 65, 19, 75, 21, 76, 13, 83, 2, 97, 8, 121, 14, 120, -20, 97, -35, 101, -50, 94, -61, 26, -59, -13, -60)

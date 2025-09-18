@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dmp45qwbrdno6"]
+[gd_scene load_steps=10 format=3 uid="uid://dmp45qwbrdno6"]
 
 [ext_resource type="Texture2D" uid="uid://opliqqpdl87g" path="res://assets/Entities/Npc's/Wizzard/Idle/Idle-Sheet.png" id="1_0iovw"]
 [ext_resource type="Script" uid="uid://b8srhlwhnv76c" path="res://scenes/NPC/wizzard_begin.gd" id="1_w0hvq"]
@@ -42,6 +42,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0iovw"]
 size = Vector2(53.8618, 3.47561)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_w0hvq"]
+radius = 154.029
+
 [node name="Wizzard_CharacterBody2D" type="CharacterBody2D"]
 y_sort_enabled = true
 script = ExtResource("1_w0hvq")
@@ -52,10 +55,29 @@ position = Vector2(-0.999998, -3)
 scale = Vector2(2.121, 2.58104)
 sprite_frames = SubResource("SpriteFrames_ag63q")
 animation = &"idle"
-frame_progress = 0.914999
+frame_progress = 0.59662
 offset = Vector2(0, -15)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1.5, -1)
 scale = Vector2(0.984, 0.984)
 shape = SubResource("RectangleShape2D_0iovw")
+
+[node name="Interate_Area2D" type="Area2D" parent="."]
+position = Vector2(57, -29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interate_Area2D"]
+position = Vector2(-56, -2)
+shape = SubResource("CircleShape2D_w0hvq")
+
+[node name="Label" type="Label" parent="."]
+visible = false
+z_index = 10
+offset_left = -64.0
+offset_top = -123.0
+offset_right = 66.0
+offset_bottom = -100.0
+text = "Hello, Traveller!!!"
+
+[connection signal="body_entered" from="Interate_Area2D" to="." method="_on_interate_area_2d_body_entered"]
+[connection signal="body_exited" from="Interate_Area2D" to="." method="_on_interate_area_2d_body_exited"]

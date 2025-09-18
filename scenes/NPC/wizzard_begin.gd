@@ -17,6 +17,11 @@ func _ready() -> void:
 		anim.animation = "idle"
 	if anim and not anim.is_playing():
 		anim.play()
+	
+	# Ensure label starts hidden (explicit in code to override any accidental scene state)
+	if label:
+		label.visible = false
+		label.hide()
 
 
 func _on_Interate_Area2D_body_entered(body: Node) -> void:

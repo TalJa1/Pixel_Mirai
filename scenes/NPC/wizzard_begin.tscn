@@ -51,23 +51,20 @@ script = ExtResource("1_w0hvq")
 
 [node name="wizzard_Wiz_AnimatedBody2D" type="AnimatedSprite2D" parent="."]
 y_sort_enabled = true
-position = Vector2(-0.999998, -3)
 scale = Vector2(2.121, 2.58104)
 sprite_frames = SubResource("SpriteFrames_ag63q")
 animation = &"idle"
-frame_progress = 0.59662
-offset = Vector2(0, -15)
+frame_progress = 0.346928
+offset = Vector2(0, -16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(1.5, -1)
+position = Vector2(2, -2)
 scale = Vector2(0.984, 0.984)
 shape = SubResource("RectangleShape2D_0iovw")
 
 [node name="Interate_Area2D" type="Area2D" parent="."]
-position = Vector2(57, -29)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interate_Area2D"]
-position = Vector2(-56, -2)
 shape = SubResource("CircleShape2D_w0hvq")
 
 [node name="Label" type="Label" parent="."]

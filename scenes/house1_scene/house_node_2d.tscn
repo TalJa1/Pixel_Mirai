@@ -8,7 +8,7 @@
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_jx3rm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e25xd"]
-size = Vector2(325.875, 169)
+size = Vector2(330, 169)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8idu4"]
 size = Vector2(12.5, 4)
@@ -548,7 +548,7 @@ uv = PackedVector2Array(47.3337, 128.1, 55.0072, 128.015, 63.8743, 137.138, 63.9
 
 [node name="House_collision2d" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
-position = Vector2(-31, -72)
+position = Vector2(-30, -72)
 shape = SubResource("RectangleShape2D_e25xd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

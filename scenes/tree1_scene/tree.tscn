@@ -2,11 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://br27jvfcfdcg5" path="res://assets/Environment/Props/Static/Trees/Model_03/Size_04.png" id="1_fuogq"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fuogq"]
-radius = 3.0
-height = 6.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s8bew"]
+size = Vector2(15, 3)
 
-[node name="Tree" type="StaticBody2D"]
+[node name="Tree1" type="StaticBody2D"]
 y_sort_enabled = true
 
 [node name="Tree_Sprite" type="Sprite2D" parent="."]
@@ -20,5 +19,5 @@ region_rect = Rect2(0, 0, 96.1332, 209.356)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 3
-position = Vector2(2, 94)
-shape = SubResource("CapsuleShape2D_fuogq")
+position = Vector2(1, 93)
+shape = SubResource("RectangleShape2D_s8bew")

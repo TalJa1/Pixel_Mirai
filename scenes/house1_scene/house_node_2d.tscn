@@ -11,7 +11,7 @@
 size = Vector2(330, 169)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8idu4"]
-size = Vector2(12.5, 4)
+size = Vector2(12.5, 2)
 
 [node name="House_node2d" type="StaticBody2D"]
 z_index = 2
@@ -521,10 +521,10 @@ y_sort_enabled = true
 
 [node name="Pillar_Sprite2D3" type="Sprite2D" parent="Full_Sprite2D/Outside_Node2D"]
 y_sort_enabled = true
-position = Vector2(613, 462)
+position = Vector2(613, 464)
 scale = Vector2(1.53572, 2.61)
 texture = ExtResource("3_tmfnj")
-offset = Vector2(0, -24)
+offset = Vector2(0, -24.2)
 region_enabled = true
 region_rect = Rect2(360, 128, 7.93185, 48.0085)
 
@@ -553,5 +553,5 @@ shape = SubResource("RectangleShape2D_e25xd")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 z_index = 4
-position = Vector2(334, 8)
+position = Vector2(334, 10)
 shape = SubResource("RectangleShape2D_8idu4")

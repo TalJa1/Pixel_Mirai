@@ -1,13 +1,13 @@
 [gd_scene load_steps=8 format=4 uid="uid://coa5nm7f3eb8k"]
 
-[ext_resource type="PackedScene" uid="uid://ch6e7m01x14br" path="res://scenes/main_player/player.tscn" id="1_eks0b"]
-[ext_resource type="Texture2D" uid="uid://ctmjv6q6r3ubl" path="res://assets/Environment/Tilesets/Floors_Tiles.png" id="2_3bvl4"]
-[ext_resource type="PackedScene" uid="uid://cxrdyyol431ne" path="res://scenes/static/green_obj/tree1_scene/tree.tscn" id="3_wou4f"]
-[ext_resource type="PackedScene" uid="uid://bh5swhqlka2f4" path="res://scenes/static/building/house1_scene/house_node_2d.tscn" id="4_0towx"]
-[ext_resource type="PackedScene" uid="uid://d1v6va1g5r1d2" path="res://scenes/static/green_obj/tree2_scene/tree_2_static_2d.tscn" id="5_v6ddo"]
+[ext_resource type="Texture2D" uid="uid://ctmjv6q6r3ubl" path="res://assets/Environment/Tilesets/Floors_Tiles.png" id="1_vkyhq"]
+[ext_resource type="PackedScene" uid="uid://ch6e7m01x14br" path="res://scenes/main_player/player.tscn" id="2_t0r7h"]
+[ext_resource type="PackedScene" uid="uid://cxrdyyol431ne" path="res://scenes/static/green_obj/tree1_scene/tree.tscn" id="3_7s2eb"]
+[ext_resource type="PackedScene" uid="uid://bh5swhqlka2f4" path="res://scenes/static/building/house1_scene/house_node_2d.tscn" id="4_nkqm6"]
+[ext_resource type="PackedScene" uid="uid://d1v6va1g5r1d2" path="res://scenes/static/green_obj/tree2_scene/tree_2_static_2d.tscn" id="5_dalv5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3bvl4"]
-texture = ExtResource("2_3bvl4")
+texture = ExtResource("1_vkyhq")
 1:0/0 = 0
 2:0/0 = 0
 3:0/0 = 0
@@ -281,7 +281,7 @@ tile_set = SubResource("TileSet_wou4f")
 [node name="YSortObject_tilemap" type="Node2D" parent="."]
 y_sort_enabled = true
 
-[node name="Player" parent="YSortObject_tilemap" instance=ExtResource("1_eks0b")]
+[node name="Player" parent="YSortObject_tilemap" instance=ExtResource("2_t0r7h")]
 z_index = 2
 position = Vector2(297, 370)
 
@@ -289,30 +289,30 @@ position = Vector2(297, 370)
 y_sort_enabled = true
 position = Vector2(798, 189)
 
-[node name="Tree" parent="YSortObject_tilemap/Group_tree1" instance=ExtResource("3_wou4f")]
+[node name="Tree" parent="YSortObject_tilemap/Group_tree1" instance=ExtResource("3_7s2eb")]
 position = Vector2(-90, -161)
 
-[node name="Tree2" parent="YSortObject_tilemap/Group_tree1" instance=ExtResource("3_wou4f")]
+[node name="Tree2" parent="YSortObject_tilemap/Group_tree1" instance=ExtResource("3_7s2eb")]
 position = Vector2(56, 171)
 
-[node name="Tree3" parent="YSortObject_tilemap/Group_tree1" instance=ExtResource("3_wou4f")]
+[node name="Tree3" parent="YSortObject_tilemap/Group_tree1" instance=ExtResource("3_7s2eb")]
 position = Vector2(-57, 70)
 
-[node name="Tree4" parent="YSortObject_tilemap/Group_tree1" instance=ExtResource("3_wou4f")]
+[node name="Tree4" parent="YSortObject_tilemap/Group_tree1" instance=ExtResource("3_7s2eb")]
 position = Vector2(106, -21)
 
-[node name="Tree5" parent="YSortObject_tilemap/Group_tree1" instance=ExtResource("3_wou4f")]
+[node name="Tree5" parent="YSortObject_tilemap/Group_tree1" instance=ExtResource("3_7s2eb")]
 position = Vector2(-149, -28)
 
-[node name="Tree6" parent="YSortObject_tilemap/Group_tree1" instance=ExtResource("3_wou4f")]
+[node name="Tree6" parent="YSortObject_tilemap/Group_tree1" instance=ExtResource("3_7s2eb")]
 position = Vector2(25, 52)
 
-[node name="Tree7" parent="YSortObject_tilemap/Group_tree1" instance=ExtResource("3_wou4f")]
+[node name="Tree7" parent="YSortObject_tilemap/Group_tree1" instance=ExtResource("3_7s2eb")]
 position = Vector2(16, -63)
 
-[node name="House_node2d" parent="YSortObject_tilemap" instance=ExtResource("4_0towx")]
+[node name="House_node2d" parent="YSortObject_tilemap" instance=ExtResource("4_nkqm6")]
 position = Vector2(160, 143)
 
-[node name="Tree2_Static2d" parent="YSortObject_tilemap" instance=ExtResource("5_v6ddo")]
+[node name="Tree2_Static2d" parent="YSortObject_tilemap" instance=ExtResource("5_dalv5")]
 z_index = 2
 position = Vector2(-128, 645)
